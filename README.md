@@ -28,10 +28,10 @@
 | image      |  text     |  null: false        |
 | comment    |  text     |  null: false        |
 | user_id    |  integer  |  foreign_key: true  |
-| status     |  integer  |                     |
-| postage    |  integer  |                     |
-| area       |  integer  |                     |
-| days       |  integer  |                     |
+| status     |  integer  |  null: false        |
+| postage    |  integer  |  null: false        |
+| area       |  integer  |  null: false        |
+| days       |  integer  |  null: false        |
 
 ### Association
 
@@ -49,10 +49,10 @@
 
 - belongs_to :item
 - belongs_to :user
-- has_one :addressee
+- has_one :addresses
 
 
-## addressees テーブル
+## addresses テーブル
 |  Column        |  type     |  Option            |
 | -------------  |  -------  |  ----------------  |
 | postal_code    |  string   |  null: false       |
