@@ -13,5 +13,6 @@ class User < ApplicationRecord
     validates :nickname
     validates :password, format: { with: VILID_PASSWORD_REGEX}
     validates :birthday
+    validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i}
   end
 end
