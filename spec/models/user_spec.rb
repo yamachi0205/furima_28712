@@ -66,13 +66,11 @@ RSpec.describe User, type: :model do
       @user.save
       another_user = FactoryBot.build(:user, email: @user.email)
       another_user.valid?
-      # binding.pry
       expect(another_user.errors.full_messages).to include("Email has already been taken")
     end
     it 'emailには@を含まなけれ登録できない' do
       @user.email = 'yamada@example.com'
       expect(@user).to be_valid
-      # binding.pry
     end
     it 'emailは@を含まなければ登録できない' do
       @user.email = 'yamada.example.com'
