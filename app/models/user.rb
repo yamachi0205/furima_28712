@@ -11,7 +11,7 @@ class User < ApplicationRecord
     validates :first_name_reading, format:{with: /\A[ァ-ヶー－]+\z/}
     validates :nickname
     validates :password
-    validates :birthbay
+    validates :birthday
   end
   
 end
