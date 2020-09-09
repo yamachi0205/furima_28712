@@ -8,11 +8,11 @@ class Item < ApplicationRecord
   belongs_to_active_hash :area
   belongs_to_active_hash :days
 
-  validates :price, :numericality => { :greater_than_or_equal_to => 300 } 
-  validates :price, :numericality => { :less_than_or_equal_to => 9999999 }
+  validates :price, numericality: { greater_than_or_equal_to: 300 }
+  validates :price, numericality: { less_than_or_equal_to: 9_999_999 }
   with_options presence: true do
     validates :name
-    validates :price,          format: { with: /\A[0-9]+\z/ }
+    validates :price, format: { with: /\A[0-9]+\z/ }
     validates :image
     validates :comment
     validates :category_id

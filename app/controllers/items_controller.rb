@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
       :status_id,
       :postage_id,
       :area_id,
-      :days_id,
+      :days_id
     ).merge(user_id: current_user.id)
   end
 end
