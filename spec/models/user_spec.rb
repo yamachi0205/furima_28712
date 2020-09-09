@@ -36,7 +36,6 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password can't be blank")
     end
     it 'passwordは６文字以上であれば登録できる' do
-      # binding.pry
       @user.password = "aa3456"
       @user.password_confirmation = "aa3456"
       expect(@user).to be_valid

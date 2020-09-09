@@ -1,13 +1,12 @@
 class Item < ApplicationRecord
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
 
-  extend ActiveHash::Association::ActiveRecordExtensions
   belongs_to_active_hash :category
-  belongs_to_active_hash :status_id
-  belongs_to_active_hash :postage_id
-  belongs_to_active_hash :area_id
-  belongs_to_active_hash :days_id
+  belongs_to_active_hash :status
+  belongs_to_active_hash :postage
+  belongs_to_active_hash :area
+  belongs_to_active_hash :days
 
   validates  :name, :price, :image, :comment, :category_id, :status_id, :postage_id, :area_id, :days_id, presence: true 
 
