@@ -6,7 +6,7 @@ FactoryBot.define do
     first_name_reading      { 'タロウ' }
     nickname                { 'yamada' }
     birthday                { '2000-01-01' }
-    email                   { 'yamada@example.com' }
+    email                   { Faker::Internet.free_email }
     password                { 'aa3456' }
     password_confirmation   { password }
   end
