@@ -5,8 +5,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    # @items = @item.user
-    # @user = User.find(params:[:id])
   end
 
   def new
