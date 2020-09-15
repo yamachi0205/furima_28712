@@ -28,8 +28,7 @@ class OrdersController < ApplicationController
       :phone_number,
       :token,
       :item_id
-    )
-          .merge(user_id: current_user.id)
+    ).merge(user_id: current_user.id)
   end
 
   def pay_item

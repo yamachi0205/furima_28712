@@ -4,6 +4,8 @@ FactoryBot.define do
     area_id       { 2 }
     city          { '大阪市' }
     house_number  { 'おおさか1−1−1−1' }
-    phone_number  { '0901234567' }
+    building_name { '' }
+    phone_number  { '09012345678' }
+    token         { 'oosaka' }
   end
 end
