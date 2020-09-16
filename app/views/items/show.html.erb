@@ -18,14 +18,15 @@
     </div>
     <div class="item-price-box">
       <span class="item-price">
-        <%= @item.price%>
+         ¥ <%= @item.price%>
       </span>
       <span class="item-postage">
         (税込) 送料込み
       </span>
     </div>
 
-    
+
+
     <% if user_signed_in? && current_user.id == @item.user_id%>
       <%= link_to '商品の編集', edit_item_path(@item), method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
@@ -42,7 +43,7 @@
     
 
     <div class="item-explain-box">
-      <span><%= "商品説明" %></span>
+      <span><%= @item.comment %></span>
     </div>
     <table class="detail-table">
       <tbody>
