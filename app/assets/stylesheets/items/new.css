@@ -104,17 +104,6 @@
   font-size: 16px;
   resize: none;
 }
-.template-btn{
-  background-color:yellowgreen;
-  margin-left: 259px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline;
-}
 
 .items-explain {
   margin-top: 2vh;
